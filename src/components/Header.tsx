@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { FlexProps } from "@chakra-ui/layout/dist/declarations/src/flex";
-import { Avatar, Box, Flex, Heading, useDisclosure } from "@chakra-ui/react";
+import { Avatar, Box, Flex, Text, useDisclosure } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import BottomArrowIcon from "../icons/BottomArrowIcon";
 
@@ -17,11 +17,11 @@ const Header: React.FunctionComponent<FlexProps> = props => {
       justify="space-between"
       wrap="wrap"
       py="1.125rem"
-      px={{ base: "1.5rem", sm: 0 }}
+      px={{ base: "2rem", sm: 0 }}
       {...props}
     >
       <Flex align="center">
-        <Heading textStyle="siteLogo">Smart Strategy</Heading>
+        <Text textStyle="siteLogo">Smart Strategy</Text>
       </Flex>
 
       <Box display={{ base: "block", sm: "none" }} onClick={onClickMenu}>

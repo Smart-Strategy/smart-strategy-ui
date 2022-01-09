@@ -16,13 +16,15 @@ function App(): JSX.Element {
       >
         <Header />
         <Flex
-          h={{ base: "auto", sm: "full" }}
+          h="full"
           borderRadius={{ sm: 10 }}
           overflow="hidden"
-          flexDirection={{ base: "column", sm: "row" }}
+          flexDirection={{ base: "column", md: "row" }}
         >
           <Box
-            minW={{ md: "26rem", sm: "22rem" }}
+            minW={{ md: "22rem" }}
+            width="full"
+            maxW={{ md: "26rem" }}
             bg="secondary"
             px={{ base: "1.125rem", sm: "2.5rem" }}
             pt={{ base: "1.125rem", sm: "1.5rem" }}
@@ -31,7 +33,8 @@ function App(): JSX.Element {
             <Text>Test</Text>
           </Box>
           <Box
-            minW={{ sm: "32rem" }}
+            minW={{ md: "32rem" }}
+            height="full"
             width="full"
             maxW={{ md: "60rem" }}
             bg="accent"

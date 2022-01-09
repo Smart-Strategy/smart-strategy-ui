@@ -1,7 +1,7 @@
 const textStyles = {
   siteLogo: {
     color: "whiteAlpha.300",
-    fontSize: ["10", "36"],
+    fontSize: { base: "30", sm: "36" },
     fontWeight: "bold",
     lineHeight: "base",
   },
