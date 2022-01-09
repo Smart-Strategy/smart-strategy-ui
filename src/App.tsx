@@ -1,25 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Box, ChakraProvider, Flex, Text } from "@chakra-ui/react";
+import Header from "./components/Header";
+import { theme } from "./theme";
 
-function App() {
+function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ChakraProvider theme={theme}>
+      <Flex
+        bg="primary"
+        w="100wh"
+        h="100vh"
+        px={{ md: "5rem", sm: "2rem" }}
+        pb={{ md: "5rem", sm: "2rem" }}
+        flexDirection="column"
+      >
+        <Header />
+        <Flex
+          h={{ base: "auto", sm: "full" }}
+          borderRadius={{ sm: 10 }}
+          overflow="hidden"
+          flexDirection={{ base: "column", sm: "row" }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Box
+            minW={{ md: "26rem", sm: "22rem" }}
+            bg="secondary"
+            px={{ base: "1.125rem", sm: "2.5rem" }}
+            pt={{ base: "1.125rem", sm: "1.5rem" }}
+            pb={{ base: "1.125rem", sm: "2.5rem" }}
+          >
+            <Text>Test</Text>
+          </Box>
+          <Box
+            minW={{ sm: "32rem" }}
+            width="full"
+            maxW={{ md: "60rem" }}
+            bg="accent"
+          >
+            <Text>Test2</Text>
+          </Box>
+        </Flex>
+      </Flex>
+    </ChakraProvider>
   );
 }
 
